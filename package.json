@@ -40,6 +40,8 @@
     "electron-vite": "^2.3.0",
     "eslint": "^8.57.0",
     "eslint-plugin-svelte": "^2.41.0",
+    "flowbite": "^2.5.2",
+    "flowbite-svelte": "^0.47.4",
     "jest": "^29.7.0",
     "prettier": "^3.3.2",
     "prettier-plugin-svelte": "^3.2.5",
