@@ -19,5 +19,6 @@ module.exports = {
   ],
   rules: {
     'svelte/no-unused-svelte-ignore': 'off',
+    'prettier/prettier': 'off',
   },
 };
