@@ -1,7 +1,7 @@
 
 # SEM-SEG
 
-An Electron application with Svelte and TypeScript
+Data tools final project. Segment silica spheres out from a SEM image.
 
 ## Setup
 
