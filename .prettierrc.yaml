@@ -4,8 +4,8 @@ printWidth: 100
 tabWidth: 2
 trailingComma: es5
 plugins:
-  - prettier-plutin-tailwindcss
+  - prettier-plugin-tailwindcss
 overrides:
-  - files: "*.svelte"
+  - files: '*.svelte'
     options:
       parser: svelte
