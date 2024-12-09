@@ -1,7 +1,6 @@
 <script lang="ts">
   const ipcHandle = (): void => window.electron.ipcRenderer.send('ping');
-
-  import { Alert } from 'flowbite-svelte';
+  import FileUpload from './components/FileUpload.svelte';
 </script>
 
 <div class="actions">
@@ -13,3 +12,4 @@
     <a target="_blank" rel="noreferrer" on:click={ipcHandle}>Send IPC</a>
   </div>
 </div>
+<FileUpload></FileUpload>
