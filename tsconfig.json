@@ -5,7 +5,6 @@
     "src/renderer/src/**/*",
     "src/renderer/src/**/*.svelte",
     "src/preload/*.d.ts",
-    "src/global.d.ts"
   ],
   "compilerOptions": {
     "verbatimModuleSyntax": true,
