@@ -1,5 +1,6 @@
 <script lang="ts">
   const ipcHandle = (): void => window.electron.ipcRenderer.send('ping');
+  import Button from './Button.svelte';
   import FileUpload from './components/FileUpload.svelte';
 </script>
 
@@ -13,3 +14,4 @@
   </div>
 </div>
 <FileUpload></FileUpload>
+<Button />

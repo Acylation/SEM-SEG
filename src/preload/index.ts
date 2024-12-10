@@ -1,15 +1,21 @@
-import { contextBridge } from 'electron';
+import { contextBridge, ipcRenderer } from 'electron';
 import { electronAPI } from '@electron-toolkit/preload';
 
 declare global {
   interface Window {
     electron: typeof electronAPI;
-    api: unknown;
+    api: {
+      runPython: (args: string[]) => Promise<string>;
+      resolveFilePath: (filename: string) => Promise<string>;
+    };
   }
 }
 
-// Custom APIs for renderer
-const api = {};
+// Python APIs
+const api = {
+  runPython: (args: string[]) => ipcRenderer.invoke('run-python', args),
+  resolveFilePath: (filename: string) => ipcRenderer.invoke('resolve-file-path', filename),
+};
 
 // Use `contextBridge` APIs to expose Electron APIs to
 // renderer only if context isolation is enabled, otherwise

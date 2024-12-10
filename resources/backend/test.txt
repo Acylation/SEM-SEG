@@ -1,0 +1,1 @@
+Text reading test successful.

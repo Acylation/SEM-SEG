@@ -296,3 +296,9 @@ dist
 out
 .DS_Store
 *.log*
+
+# pyinstaller working file
+temp/
+
+# pyinstaller output executable
+*.exe

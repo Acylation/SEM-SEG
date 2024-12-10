@@ -3,6 +3,9 @@ import { join } from 'path';
 import { electronApp, optimizer, is } from '@electron-toolkit/utils';
 import icon from '../../resources/icon.png?asset';
 
+import { runPython } from './runPython';
+import { resolveFilePath } from './resolveFilePath';
+
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -51,6 +54,26 @@ app.whenReady().then(() => {
 
   // IPC test
   ipcMain.on('ping', () => console.log('pong'));
+
+  ipcMain.handle('run-python', async (_event, args) => {
+    try {
+      const result = await runPython(args);
+      return result;
+    } catch (error) {
+      console.error('Failed to run Python:', error);
+      throw error;
+    }
+  });
+
+  ipcMain.handle('resolve-file-path', (_, filename) => {
+    try {
+      const result = resolveFilePath(filename);
+      return result;
+    } catch (error) {
+      console.error('Failed to resolve file path:', error);
+      throw error;
+    }
+  });
 
   createWindow();
 
