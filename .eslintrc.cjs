@@ -20,5 +20,6 @@ module.exports = {
   rules: {
     'svelte/no-unused-svelte-ignore': 'off',
     'prettier/prettier': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
   },
 };
