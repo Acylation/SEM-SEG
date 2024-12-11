@@ -2,7 +2,7 @@ import { spawn, execFile } from 'child_process';
 import { join } from 'path';
 import { is } from '@electron-toolkit/utils';
 
-const PYTHON_PATH = '.venv/Scripts/python.exe'; // Dev only, local environment needed
+const PYTHON_PATH = 'python'; // Dev only, local environment dependent
 const SCRIPT_PATH = join(__dirname, '../../resources/backend/app.py');
 const EXE_PATH = join(__dirname, '../../resources/backend/app.exe');
 

@@ -1,22 +1,24 @@
-import os, sys
+import sys
 import json
 import numpy as np
 import pandas as pd
+import torch
+import torchvision
 
 def main():
     # Check if exactly two arguments are passed
-    # if len(sys.argv) != 4:
-    #     print(json.dumps({"error": "Three arguments are required"}))
-    #     return
+    if len(sys.argv) != 4:
+        print(json.dumps({"error": "Three arguments are required"}))
+        return
 
-    # str1, str2, file_path = sys.argv[1], sys.argv[2], sys.argv[3]
-    str1 = "gen"
-    str2 = "shin"
-    file_path = "./resources/backend/test.txt"
+    str1, str2, file_path = sys.argv[1], sys.argv[2], sys.argv[3]
+    # str1 = "gen"
+    # str2 = "shin"
+    # file_path = "./resources/backend/test.txt"
     result = str1 + str2
 
     # Output the result as JSON
-    print(json.dumps({"result": result, "np version": np.__version__, "tf version": pd.__version__}))
+    print(json.dumps({"result": result, "np version": np.__version__, "pd version": pd.__version__, "torch version": torch.__version__, "tv version": torchvision.__version__}))
     
     # works for dev
     # script_dir = os.path.dirname(os.path.abspath(__file__))
