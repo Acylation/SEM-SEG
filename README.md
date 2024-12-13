@@ -31,3 +31,14 @@ Prerequisites:
 npm run dev: start hot frontend reload
 npm run build: build python to exe and compile svelte/ts to pure js
 npm run build:win: generate distributable files.
+
+## Environment
+
+pytorch for cpu
+numpy
+matplotlib
+opencv-python
+pandas
+pycocotools
+
+<https://maxjoas.medium.com/finetune-segment-anything-sam-for-images-with-multiple-masks-34514ee811bb>
