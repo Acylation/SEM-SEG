@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Button from './Button.svelte';
+  import PyButton from './PyButton.svelte';
 </script>
 
-<Button />
+<PyButton />

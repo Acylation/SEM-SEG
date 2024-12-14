@@ -14,5 +14,5 @@
   });
 </script>
 
-<!-- <FileUpload /> -->
-<Form />
+<FileUpload />
+<!-- <Form /> -->

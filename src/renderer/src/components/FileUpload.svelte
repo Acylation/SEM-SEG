@@ -17,7 +17,7 @@
   const processFiles = (fileList: FileList | File[]) => {
     [...fileList].forEach((file) => {
       if (file.type.indexOf('image/') === 0) {
-        value.push({ name: file.name, path: '' });
+        value.push({ name: file.name, path: file.path.replace(file.name, '') });
         value = value;
         files.push(file);
         file = file;

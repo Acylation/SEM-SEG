@@ -17,7 +17,7 @@
 </Label>
 
 <Label class="mb-2 block">Your email</Label>
-<Input label="Email" id="email" name="email" required placeholder="name@flowbite.com" />
+<Input id="email" name="email" required placeholder="name@flowbite.com" />
 <Helper class="mt-2 text-sm">
   We’ll never share your details. Read our <a
     href="/"
